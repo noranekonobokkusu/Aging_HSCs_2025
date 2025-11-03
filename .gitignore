@@ -1,0 +1,22 @@
+# Ignore these folders
+input_data/*_data/
+input_data/BoneMarrowMap/
+3_scVI_integration/*/
+4_run_cNMF/*/
+5_cNMF_analysis/*/
+5_cNMF_analysis/total_result.sample.resized.png
+6_SCENIC/*/
+8_*/
+9_*/
+10_*/
+**/obsolete/
+
+**/.DS_Store
+.DS_Store
+Icon?
+
+*.rds
+
+*.h5ad
+
+*.Rhistory
