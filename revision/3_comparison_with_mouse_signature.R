@@ -76,7 +76,7 @@ foraRes = fora(pathways = pathways,
                 minSize  = 5)
 data.table::fwrite(foraRes, file=paste0("compare_to_mouse_aging_signature/Supplementary_Table_4.tsv"), sep="\t", sep2=c("", " ", ""), append = F)
 
-p = foraRes %>%
+p_a = foraRes %>%
   filter(grepl("HALLMARK|REACTOME|KEGG", pathway)) %>%
   slice_head(n=20) %>%
   arrange(desc(padj)) %>%
@@ -86,8 +86,6 @@ p = foraRes %>%
   theme_pubr() +
   scale_fill_gradient(low="steelblue3", high="powderblue", breaks=scales::pretty_breaks(n = 2), limits=c(0, 0.02))
 
-save_plot("compare_to_mouse_aging_signature/mouse_signature_fora.png", p, base_height = 6, base_width = 9, dpi=600)
-
 pathways = foraRes %>%
   filter(grepl("HALLMARK|REACTOME|KEGG", pathway)) %>%
   slice_head(n=20) %>%
@@ -96,7 +94,7 @@ pathways = foraRes %>%
 
 human_gsea_results = data.table::fread(file=paste0(base_dir, "2_differential_expression_analysis/DESeq2_GSEA_results.txt"), sep="\t", sep2=c("", " ", ""))
 
-p = human_gsea_results %>%
+p_b = human_gsea_results %>%
   filter(pathway %in% pathways) %>%
   mutate(pathway = factor(pathway, levels = pathways)) %>%
   ggplot(aes(x=NES,y=pathway,fill=padj, label=round(padj, 3))) +
@@ -104,4 +102,6 @@ p = human_gsea_results %>%
   geom_text(aes(x=NES-0.3*sign(NES))) +
   scale_fill_gradientn(colours = c("steelblue2", "grey", "grey"), values = c(0, 0.05, 1)) +
   theme_pubr()
-save_plot("compare_to_mouse_aging_signature/mouse_pathways_in_human_gsea.png", p, base_height = 6, base_width = 9, dpi=600)
+
+p = ggarrange(p_a, p_b, labels = c("a", "b"), ncol = 1)
+save_plot("compare_to_mouse_aging_signature/Suppl.Fig.14.png", p, base_height = 12, base_width = 9, dpi=600)

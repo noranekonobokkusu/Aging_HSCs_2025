@@ -92,7 +92,7 @@ p = regulons_mean_ranks_and_cors %>%
   xlab("mean rank") +
   ylab("mean correlation")
 p
-save_plot("Suppl.Fig.4a.pdf", p, base_height = 3, base_width = 3)
+save_plot("Suppl.Fig.6a.pdf", p, base_height = 3, base_width = 3)
 
 # Plot average Z-score heatmaps
 p = auc_long_df %>%
@@ -125,7 +125,7 @@ p = auc_long_df %>%
         legend.text = element_text(size=5)) +
   xlab("Transcription factor")
 p
-save_plot("Suppl.Fig.4b.pdf", p, base_height = 3, base_width = 3)
+save_plot("Suppl.Fig.6b.pdf", p, base_height = 3, base_width = 3)
 
 # Plot average Z-score heatmaps (Fig. 1h)
 p = auc_long_df %>%
@@ -219,7 +219,7 @@ p = regulons_mean_ranks_and_cors_per_program %>%
         legend.margin = margin(0,0,0,0),
         legend.text = element_text(size=5))
 p
-save_plot("Suppl.Fig.7.pdf", p, base_width = 80, base_height = 60, units = "mm")
+save_plot("Suppl.Fig.9.pdf", p, base_width = 80, base_height = 60, units = "mm")
 
 # Define top regulons per metaGEP
 top_regulons_per_program = regulons_mean_ranks_and_cors_per_program %>%

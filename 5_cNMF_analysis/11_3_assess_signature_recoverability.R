@@ -220,7 +220,7 @@ p2 = t %>%
 p2
 
 p = ggarrange(p1, p2, ncol=1, labels = c("a", "b"), heights = c(0.7, 0.4))
-cowplot::save_plot("random_gene_sets_control/Suppl.Fig.controls.pdf", p, base_height = 15, base_width = 10)
+cowplot::save_plot("random_gene_sets_control/Suppl.Fig.15.pdf", p, base_height = 15, base_width = 10)
 
 
 # This is the same panel as above but transposed, which used to be a panel in Figure 2

@@ -256,6 +256,6 @@ hm = Heatmap(full_similarity_matrix,
 hm
 
 # Save as pdf
-pdf("meta_clusters_starcat/Suppl.Fig.5a.pdf", width = 160/25.4, height = 120/25.4)
+pdf("meta_clusters_starcat/Suppl.Fig.7a.pdf", width = 160/25.4, height = 120/25.4)
 draw(hm, annotation_legend_side = "right", merge_legend = TRUE, heatmap_legend_side = "right")
 dev.off()

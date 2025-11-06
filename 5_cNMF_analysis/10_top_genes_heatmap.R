@@ -108,7 +108,7 @@ hm = Heatmap(heatmap_df,
 )
 
 hm
-pdf("meta_clusters_starcat/Suppl.Fig.5b.pdf", width = 120/25.4, height = 120/25.4)
+pdf("meta_clusters_starcat/Suppl.Fig.7b.pdf", width = 120/25.4, height = 120/25.4)
 draw(hm, annotation_legend_side = "right", merge_legend = TRUE, heatmap_legend_side = "right", padding = unit(c(0, 0, 2, 0), "mm"))
 dev.off()
 

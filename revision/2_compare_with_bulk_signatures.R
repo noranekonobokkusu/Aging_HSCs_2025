@@ -78,6 +78,7 @@ for (Dataset in c("Adelman2019", "Pang2011", "Nilsson2016", "Hennrich2018")) {
     theme_pubr() +
     ggtitle(Dataset)
   
+  # Individual panels of Suppl. Fig. 3:
   save_plot(paste0("compare_to_bulk_results/volcano.", Dataset, "_de_results_highlighted.png"), p, base_height = 6, base_width = 6, dpi=600)
   
 }
@@ -98,7 +99,7 @@ fgseaRes = fgsea(pathways = pathways_for_gsea,
                  stats    = ranks,
                  minSize  = 5,
                  eps      = 0.0,
-                 maxSize  = 500,
+                 maxSize  = 1000,
                  nPermSimple = 10000)
 
 p = fgseaRes %>%
@@ -109,4 +110,4 @@ p = fgseaRes %>%
   scale_color_manual(values = c("white", "black"), guide="none") +
   coord_flip() +
   xlab("Gene set")
-save_plot("compare_to_bulk_results/GSEA_of_prior_studies_signatures.png", p, base_height = 6, base_width = 6, dpi = 600)
+save_plot("compare_to_bulk_results/Suppl.Fig.4.png", p, base_height = 6, base_width = 6, dpi = 600)

@@ -10,10 +10,10 @@ The final objects prepared in `1_dataset_preparation/` and `5_cNMF_analysis/` ar
 - `2_differential_expression_analysis/` - Run `DESeq2` and `GSEA`. This creates **Fig. 1b,c** and **Suppl. Fig. 2**.
 - `3_scVI_integration/` - Integrate HSCs for visualization. Integrate HSPCs to validate BoneMarrowMap-produced HSC annotations. This creates **Suppl. Fig. 1** with annotation comparisons.
 - `4_cNMF_run/` - Run `cNMF` and collect results (on a computational cluster).
-- `5_cNMF_analysis/` - Load `cNMF` results, define metaGEPs, score metaGEP usages by `starCAT`, compare signature recovery to a random gene set. This creates **Fig. 1d,e,f**, **Fig. 2d,e**, **Suppl. Fig. 3,5,6,8**.
-- `6_SCENIC/` - Run `SCENIC` on individual datasets and analyze results. This creates **Fig. 1h**, **Fig. 2h**, **Suppl. Fig. 4,7**.
+- `5_cNMF_analysis/` - Load `cNMF` results, define metaGEPs, score metaGEP usages by `starCAT`, compare signature recovery to a random gene set. This creates **Fig. 1d,e,f**, **Fig. 2d,e**, **Suppl. Fig. 5,7,8,15**.
+- `6_SCENIC/` - Run `SCENIC` on individual datasets and analyze results. This creates **Fig. 1h**, **Fig. 2h**, **Suppl. Fig. 6,9**.
 - `7_CNA/` - Run `CNA`. This creates **Fig. 1g**.
-- `revision/` - Analysis conducted during manuscript revision. This creates panels for **Fig. 2h-j**, **Suppl. Fig. 9-10**, and figures in **Supplementary Note**.
+- `revision/` - Analysis conducted during manuscript revision. This creates panels for **Fig. 2h-j**, **Suppl. Figs. 3,4,10,11,14**, and figures in **Supplementary Note**.
 
 ### Shared Seurat objects
 On [Figshare](https://figshare.com/projects/Aging_HSCs_2025/235781), the following three `.rds` objects are shared:
